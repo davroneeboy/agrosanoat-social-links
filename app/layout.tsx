@@ -4,6 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Agrosanoatni rivojlantirish agentligi | QXV huzurida',
   description: 'Agrosanoatni rivojlantirish agentligi rasmiy sahifasi',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
 }
 
 export default function RootLayout({

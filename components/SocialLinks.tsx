@@ -9,7 +9,7 @@ const socialLinks: SocialLink[] = [
     url: 'https://gov.uz/oz/agrosanoat',
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-full h-full"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ const socialLinks: SocialLink[] = [
     url: 'https://t.me/agrosanoat_uz',
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-full h-full"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const socialLinks: SocialLink[] = [
     url: 'https://www.facebook.com/uz.agrosanoat',
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-full h-full"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ const socialLinks: SocialLink[] = [
     url: 'https://www.youtube.com/@Agrosanoat_uz',
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-full h-full"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const socialLinks: SocialLink[] = [
     url: 'https://www.instagram.com/agrosanoat_uz',
     icon: (
       <svg
-        className="w-8 h-8"
+        className="w-full h-full"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ const SocialLinks = () => {
 
   return (
     <nav className="w-full" aria-label="Ijtimoiy tarmoqlar">
-      <ul className="flex flex-col gap-4 md:gap-6">
+      <ul className="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6">
         {socialLinks.map((link, index) => (
           <li
             key={link.name}
@@ -129,17 +129,17 @@ const SocialLinks = () => {
                 handleClick(link.url)
               }}
               onKeyDown={(e) => handleKeyDown(e, link.url)}
-              className="flex items-center gap-4 p-6 md:p-8 bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 animate-pulse-scale"
+              className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 lg:p-8 bg-gray-800 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 animate-pulse-scale"
               style={{
                 animationDelay: `${index * 0.3}s`,
               }}
               tabIndex={0}
               aria-label={`${link.name} sahifasiga o'tish`}
             >
-              <span className="text-gray-400 flex-shrink-0" aria-hidden="true">
+              <span className="text-gray-400 flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" aria-hidden="true">
                 {link.icon}
               </span>
-              <span className="text-xl md:text-2xl font-semibold text-gray-200 flex-1 text-left">
+              <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-200 flex-1 text-left">
                 {link.name}
               </span>
             </a>
