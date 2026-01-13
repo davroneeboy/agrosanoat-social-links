@@ -129,7 +129,10 @@ const SocialLinks = () => {
                 handleClick(link.url)
               }}
               onKeyDown={(e) => handleKeyDown(e, link.url)}
-              className="flex items-center gap-4 p-6 md:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50"
+              className="flex items-center gap-4 p-6 md:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 animate-pulse-scale"
+              style={{
+                animationDelay: `${index * 0.3}s`,
+              }}
               tabIndex={0}
               aria-label={`${link.name} sahifasiga o'tish`}
             >
