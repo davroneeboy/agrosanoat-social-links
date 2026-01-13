@@ -129,17 +129,17 @@ const SocialLinks = () => {
                 handleClick(link.url)
               }}
               onKeyDown={(e) => handleKeyDown(e, link.url)}
-              className="flex items-center gap-4 p-6 md:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 animate-pulse-scale"
+              className="flex items-center gap-4 p-6 md:p-8 bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 animate-pulse-scale"
               style={{
                 animationDelay: `${index * 0.3}s`,
               }}
               tabIndex={0}
               aria-label={`${link.name} sahifasiga o'tish`}
             >
-              <span className="text-gray-600 dark:text-gray-400 flex-shrink-0" aria-hidden="true">
+              <span className="text-gray-400 flex-shrink-0" aria-hidden="true">
                 {link.icon}
               </span>
-              <span className="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200 flex-1 text-left">
+              <span className="text-xl md:text-2xl font-semibold text-gray-200 flex-1 text-left">
                 {link.name}
               </span>
             </a>
