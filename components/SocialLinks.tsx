@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { SocialLink } from '@/types/social'
 
 const socialLinks: SocialLink[] = [
@@ -87,6 +88,12 @@ const socialLinks: SocialLink[] = [
 ]
 
 const SocialLinks = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   const handleClick = (url: string): void => {
     window.open(url, '_blank', 'noopener,noreferrer')
   }
@@ -101,8 +108,18 @@ const SocialLinks = () => {
   return (
     <nav className="w-full" aria-label="Ijtimoiy tarmoqlar">
       <ul className="flex flex-col gap-4 md:gap-6">
-        {socialLinks.map((link) => (
-          <li key={link.name}>
+        {socialLinks.map((link, index) => (
+          <li
+            key={link.name}
+            className={`transform transition-all duration-700 ease-out ${
+              isVisible
+                ? 'translate-x-0 opacity-100'
+                : 'translate-x-full opacity-0'
+            }`}
+            style={{
+              transitionDelay: isVisible ? `${index * 100}ms` : '0ms',
+            }}
+          >
             <a
               href={link.url}
               target="_blank"
