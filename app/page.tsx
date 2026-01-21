@@ -31,14 +31,11 @@ const Home = () => {
             />
           </div>
           <div
-            className={`space-y-2 sm:space-y-3 md:space-y-4 transform transition-all duration-700 ease-out ${
+            className={`transform transition-all duration-700 ease-out ${
               isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
             }`}
             style={{ transitionDelay: '300ms' }}
           >
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-gray-300 px-2">
-              Qishloq xo'jaligi vazirligi huzuridagi
-            </p>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight px-2">
               Agrosanoatni rivojlantirish agentligi
             </h1>
